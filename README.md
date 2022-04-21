@@ -38,7 +38,7 @@
   - 可查看系统日志，记录所有操作
 
 ## 技术方案
-spring boot + mybatis + js + mysql + redis
+spring boot + mybatis + js + mysql + redis + clickhouse
 
 ## 技术文档
 经过以上分析，需要实现需求功能，大致将此系统分为
