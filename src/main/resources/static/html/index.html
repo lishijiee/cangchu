@@ -6,11 +6,33 @@
     <!--css文件的两种引入方式
     <link rel="stylesheet" type="text/css" href="static/css/index.css">
     -->
+
+    <script type="text/javascript" src="./../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert("开始使用Jquery");
+        })
+
+        $(document).ready( myinit());
+        function myinit() {
+            alert("函数和调用分开了");
+        }
+
+        $(myinit1())
+        function myinit1() {
+            alert("最简化的函数调用");
+        }
+    </script>
+
     <style> @import url(../css/index.css);</style>
 </head>
 <body>
 
-<div id="box2">欢迎来到cangchu仓储物流管理系统</div>
+<div id="box2">欢迎来到 cangchu 仓储物流管理系统</div>
 <div class="link-top"></div>
+
+
+
+
 </body>
 </html>
