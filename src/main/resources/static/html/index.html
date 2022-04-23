@@ -22,6 +22,18 @@
         function myinit1() {
             alert("最简化的函数调用");
         }
+        <!-- dom对象转Jquery对象 -->
+        function myBtn(){
+            var dom = document.getElementById("btn"); // 使用 JS 语法获取 dom 对象
+            var $jqObj = $(dom)
+            alert($jqObj.val())
+        }
+        <!-- Jquery对象转dom对象 -->
+        function myBtn2(){
+            var jObj = $("#btn2"); // 使用 Jquery语法获取Jquery对象，Jquery对象就是一个数组，包含 >=0 个 dom 对象
+            var dom = jObj.get(0); //
+            alert(dom.value)
+        }
     </script>
 
     <style> @import url(../css/index.css);</style>
@@ -32,7 +44,9 @@
 <div class="link-top"></div>
 
 
+<input type="button" id="btn" value="dom->jquery" onclick="myBtn()">
 
+<input type="button" id="btn2" value="jquery->dom" onclick="myBtn2()">
 
 </body>
 </html>
