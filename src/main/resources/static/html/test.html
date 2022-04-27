@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mdToHTMLDemo</title>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/Markdown.Converter.js"></script>
+</head>
+<body>
+<!--输入需要转换的内容框开始-->
+<h1>转换前</h1>
+<textarea id="demo1" style="width:800px;height:200px;">
+
+    hadoop命令需在hadoop目录下使用
+**常用命令**
+
+    HDFS格式化:
+    bin/hadoop namenode -format    格式化namenode
+    bin/hadoop datanode -format    格式化datanode
+
+    ## 如不是第一次格式化，为了保证clusterID一致性,
+    ### 需先删除hdfs临时目录,
+    #### 即在配置文件中配置的hadoop.tmp.dir参数路径
+    </textarea>
+<!--输入需要转换的内容框结束-->
+
+<!--点击该按钮进行转换-->
+<button onclick="mdToHml();" type="button">转Html</button>
+
+<!--展示转换后的内容开始-->
+<div id="test">================转换后的内容================</div>
+<!--展示转换后的内容结束-->
+
+<!--js开始-->
+<script type="text/javascript">
+
+    //转换的方法
+    function mdToHml(){
+        var md=$("#demo1").val();//得到需要转换的内容
+        var converter = new Markdown.Converter();
+        var htm = converter.makeHtml(md);//转换
+        $('#test').html(htm);//显示到页面
+    }
+
+</script>
+<!--js结束-->
+
+</body>
+</html>
