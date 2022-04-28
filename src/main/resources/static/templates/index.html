@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cangchu</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>用户ID</td>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>密码</td>
+        <td>邮箱</td>
+    </tr>
+    <tr th:each="user:${allUser}">
+    <td th:text="${user.userId}"></td>
+    <td th:text="${user.userName}"></td>
+    <td th:text="${user.age}"></td>
+    <td th:text="${user.password}"></td>
+    <td th:text="${user.email}"></td>
+
+    </tr>
+</table>
+
+<!--<div th:each="user,userStat:${allUser}">-->
+<!--    <span th:text="${userStat.index}"></span>-->
+<!--    <span th:text="${user.id}"></span>-->
+<!--    <span th:text="${user.userName}"></span>-->
+<!--    <span th:text="${user.passWord}"></span>-->
+<!--    <span th:text="${user.email}"></span>-->
+<!--</div>-->
+
+</body>
+</html>

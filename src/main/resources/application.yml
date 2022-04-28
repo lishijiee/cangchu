@@ -9,6 +9,14 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
+  # thymeleaf
+  thymeleaf:
+    cache: false
+    prefix: classpath:/static/templates/
+    encoding: UTF-8 #编码
+    suffix: .html #模板后缀
+    mode: HTML #模板
+
 ###### MyBatis config ######
 mybatis:
   # 指定 mapper.xml 的位置
@@ -20,3 +28,4 @@ mybatis:
     map-underscore-to-camel-case: true
     # 打印sql
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
