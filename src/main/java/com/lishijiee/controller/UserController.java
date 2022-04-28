@@ -25,15 +25,15 @@ public class UserController {
         return "index";
     }
 
-    // 传值的一种方式
-    @GetMapping("/getAllUser2")
-    public ModelAndView getUser2(){
-        List<User> allUser = userService.getAllUser();
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("allUser",allUser);
-        modelAndView.setViewName("allUser");
-        return modelAndView;
-    }
+//    // 传值的一种方式
+//    @GetMapping("/getAllUser2")
+//    public ModelAndView getUser2(){
+//        List<User> allUser = userService.getAllUser();
+//
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("allUser",allUser);
+//        modelAndView.setViewName("allUser");
+//        return modelAndView;
+//    }
 
 }
