@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.lishijiee.mapper")
+//@MapperScan("com.lishijiee.mapper")
 public class CangchuApplication {
 
     public static void main(String[] args) {
