@@ -6,13 +6,20 @@ import com.lishijiee.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("userService")
+import java.util.List;
+
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
 
+//    @Override
+//    public User getUser(User user) {
+//        return userMapper.getUser(user);
+//    }
+
     @Override
-    public User getUser(User user) {
-        return userMapper.getUser(user);
+    public List<User> getAllUser() {
+        return userMapper.getAllUser();
     }
 }

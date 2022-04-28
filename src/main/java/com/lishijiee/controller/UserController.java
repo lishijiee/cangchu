@@ -2,31 +2,20 @@ package com.lishijiee.controller;
 
 import com.lishijiee.pojo.User;
 import com.lishijiee.service.UserService;
-import lombok.extern.slf4j.Slf4j;
+import com.lishijiee.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpSession;
-import java.util.Map;
-import java.util.Objects;
+import java.util.List;
 
-@Slf4j
-@Controller
+@RestController
 public class UserController {
     @Autowired
     UserService userService;
 
-    public String dologin(User user, Map<String, Object> map, HttpSession session){
-        User loginUser = userService.getUser(user);
-        if(Objects.nonNull(loginUser)){
-            session.setAttribute("loginUser", loginUser);
-            log.info("登陆成功，用户名：" + loginUser.getUserName());
-            //防止重复提交使用重定向
-            return "redirect:/main.html";
-        }else{
-            map.put("msg", "用户名或密码错误");
-            log.error("登陆失败");
-            return "login";
-        }
+    @RequestMapping("/getAllUser")
+    public List<User> getAllUser(){
+        return userService.getAllUser();
     }
 }

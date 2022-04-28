@@ -10,15 +10,15 @@ import java.util.List;
 
 @Controller
 public class AjaxTestController {
-    @RequestMapping("/api/getUser")
-    public List<User> getJson(){
-        User user1 = new User(1, "zhangsan", 13);
-        User user2 = new User(2, "lisi", 14);
-        User user3 = new User(3, "wangwu", 15);
-        List<User> list = new ArrayList<>();
-        list.add(user1);
-        list.add(user2);
-        list.add(user3);
-        return list;
-    }
+//    @RequestMapping("/api/getUser")
+//    public List<User> getJson(){
+//        User user1 = new User(1, "zhangsan", 13);
+//        User user2 = new User(2, "lisi", 14);
+//        User user3 = new User(3, "wangwu", 15);
+//        List<User> list = new ArrayList<>();
+//        list.add(user1);
+//        list.add(user2);
+//        list.add(user3);
+//        return list;
+//    }
 }

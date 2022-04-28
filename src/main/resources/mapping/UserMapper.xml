@@ -13,11 +13,9 @@
     </sql>
     <!--根据用户名密码查询用户信息-->
     <!--application.yml 中通过 type-aliases-package 指定了实体类的为了，因此-->
-    <select id="getUser" resultType="User">
-        select *
-        from user
-        where user_name = #{userName,jdbcType=VARCHAR}
-          and password = #{password,jdbcType=VARCHAR}
+
+    <select id="getAllUser" resultType="com.lishijiee.pojo.User">
+        select * from user
     </select>
 
 </mapper>
