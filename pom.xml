@@ -22,6 +22,7 @@
 
     <modules>
         <module>cangchu-core</module>
+        <module>cangchu-common</module>
     </modules>
     <dependencies>
         <dependency>
