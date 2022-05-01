@@ -12,12 +12,17 @@
     <artifactId>cangchu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>cangchu</name>
+    <packaging>pom</packaging>
     <description>cangchu</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
     </properties>
+
+    <modules>
+        <module>cangchu-core</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
